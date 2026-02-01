@@ -1,6 +1,7 @@
 # lmms-eval-for-llama
 lmms-eval modified for evaluation for llama-3.2-11B-Vision-Instruct
 
+## Original score:
 | Benchmark | Value  | Stderr |
 |----------|--------|--------|
 | VQAv2    | 0.6808 | 0.0009 |
