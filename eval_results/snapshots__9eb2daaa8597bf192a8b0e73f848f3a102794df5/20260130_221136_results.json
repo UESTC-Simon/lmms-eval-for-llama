@@ -1,0 +1,120 @@
+{
+  "results": {
+    "vqav2_val": {
+      "alias": "vqav2_val",
+      "exact_match,none": 0.6807514671991745,
+      "exact_match_stderr,none": 0.0009454593871186849,
+      "exact_match_stderr_clt,none": 0.0009454593871177069,
+      "exact_match_stderr_clustered,none": "N/A"
+    }
+  },
+  "group_subtasks": {
+    "vqav2_val": []
+  },
+  "configs": {
+    "vqav2_val": {
+      "task": "vqav2_val",
+      "dataset_path": "lmms-lab/VQAv2",
+      "dataset_kwargs": {
+        "token": true
+      },
+      "test_split": "validation",
+      "full_docs": false,
+      "process_results_use_image": false,
+      "doc_to_visual": "<function vqav2_doc_to_visual at 0x7475820d95a0>",
+      "doc_to_text": "<function vqav2_doc_to_text at 0x7475820d8940>",
+      "doc_to_target": "answer",
+      "process_results": "<function vqav2_process_results_val at 0x7475820d9b40>",
+      "description": "",
+      "target_delimiter": " ",
+      "fewshot_delimiter": "\n\n",
+      "num_fewshot": 0,
+      "metric_list": [
+        {
+          "metric": "exact_match",
+          "aggregation": "mean",
+          "higher_is_better": true,
+          "ignore_case": true,
+          "ignore_punctuation": true
+        }
+      ],
+      "output_type": "generate_until",
+      "generation_kwargs": {
+        "max_new_tokens": 16,
+        "until": [
+          "\n\n"
+        ]
+      },
+      "repeats": 1,
+      "should_decontaminate": false,
+      "score_key": "score",
+      "metadata": [
+        {
+          "version": 0.0
+        }
+      ],
+      "lmms_eval_specific_kwargs": {
+        "default": {
+          "pre_prompt": "",
+          "post_prompt": "\nAnswer the question using a single word or phrase."
+        },
+        "llama_vision": {
+          "pre_prompt": "Question: ",
+          "post_prompt": "\nAnswer the question using a single word or phrase."
+        },
+        "plm": {
+          "pre_prompt": "",
+          "post_prompt": ""
+        }
+      }
+    }
+  },
+  "versions": {
+    "vqav2_val": "Yaml"
+  },
+  "n-shot": {
+    "vqav2_val": 0
+  },
+  "higher_is_better": {
+    "vqav2_val": {
+      "exact_match": true
+    }
+  },
+  "n-samples": {
+    "vqav2_val": {
+      "original": 214354,
+      "effective": 214354
+    }
+  },
+  "config": {
+    "model": "llama_vision",
+    "model_args": "pretrained=/data2/users/zhangjy/test_vlm/huggingface/hub/models--meta-llama--Llama-3.2-11B-Vision-Instruct/snapshots/9eb2daaa8597bf192a8b0e73f848f3a102794df5,dtype=bfloat16",
+    "batch_size": "1",
+    "batch_sizes": [],
+    "device": null,
+    "use_cache": null,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "gen_kwargs": "",
+    "random_seed": 0,
+    "numpy_seed": 1234,
+    "torch_seed": 1234,
+    "fewshot_seed": 1234
+  },
+  "git_hash": "6845ab6b",
+  "date": "20260130_221136",
+  "task_hashes": {
+    "vqav2_val": "07d5bd99d4d9e057e7e4046765316ddf3f9771aa6d7fe204786e14420b764cf7"
+  },
+  "model_source": "llama_vision",
+  "model_name": "/data2/users/zhangjy/test_vlm/huggingface/hub/models--meta-llama--Llama-3.2-11B-Vision-Instruct/snapshots/9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+  "model_name_sanitized": "snapshots__9eb2daaa8597bf192a8b0e73f848f3a102794df5",
+  "system_instruction": null,
+  "system_instruction_sha": null,
+  "fewshot_as_multiturn": false,
+  "chat_template": null,
+  "chat_template_sha": null,
+  "start_time": 33484.376039846,
+  "end_time": 53318.025234207,
+  "total_evaluation_time_seconds": "19833.649194361"
+}
